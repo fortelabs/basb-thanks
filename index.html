@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <title>BASB Coaching</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <a class="navbar-brand" href="index.html">BASB Coaching</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+	<!-- <ul class="navbar-nav mr-auto">
+	  <li class="nav-item">
+	    <a class="nav-link" href="codeofconduct.html">Code of Conduct</a>
+	  </li>
+	</ul> -->
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <div class="jumbotron">
+      	<h1>Thank you!</h1>
+        <p class="lead">Interested in coaching to help you get unstuck? Let us know!</p>
+        <!-- Email Signup -->
+        <div class="preenrollment-form-wrapper col-sm-6 col-sm-offset-1">
+          <form id="mc-embedded-subscribe-form" action="https://fortelabs.us7.list-manage.com/subscribe/post?u=a1abc586dc0937e81ef97efcb&amp;id=6e1005e441" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="" class="signup-form">
+            <div class="form-group">
+              <label for="ck_emailField">Email address</label>
+              <input type="email" class="form-control" id="ck_emailField" name="EMAIL" required="" type="text" placeholder="Enter email">
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" name="group[73075][128]" id="group_128" aria-describedby="personalizedCoachingHelp">
+              <label class="form-check-label" for="group_128">Live Personalized Coaching</label>
+              <small id="personalizedCoachingHelp" class="form-text text-muted">For a limited time we’re offering your first coaching session with a money back guarantee.</small>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" name="group[73075][256]" id="group_256" aria-describedby="freeGroupCoachingHelp">
+              <label class="form-check-label" for="group_256">Free Group Coaching</label>
+              <small id="freeGroupCoachingHelp" class="form-text text-muted">We plan to offer group coaching for the areas that have the most folks stuck.</small>
+            </div>
+            <input id="ck_subscribe_button" type="submit" value="Update Preferences" class="btn btn-primary mt-3">
+          </form>
+        </div>
+      </div> 
+      <!-- <div>
+        <h1>Debug</h1>
+        <p><strong>Clicked:</strong> <span id="stuck"></span></p>
+      </div> -->
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+function getQueryVariable(variable)
+{
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+          var pair = vars[i].split("=");
+          if(pair[0] == variable){return pair[1];}
+  }
+  return(false);
+}
+
+$( document ).ready(function() {
+  var email = getQueryVariable("email");
+  var stuck = decodeURIComponent(getQueryVariable("stuck"));
+  $("#ck_emailField").val(email);
+  // $("#stuck").html(stuck);
+});
+
+
+    </script>
+  </body>
